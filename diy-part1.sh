@@ -16,3 +16,5 @@
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+# 删除导致补丁冲突的 SFP 驱动补丁
+rm -f target/linux/generic/backport-6.6/730-v6.7-net-sfp-re-implement-ignoring-the-hardware-T.patch
